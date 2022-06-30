@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  align-items: center;
+}
+
+.intro img {
+  width: 350px;
+}
+
+.intro h2 {
+  font-size: 2.25rem;
+  text-transform: uppercase;
+}
+
+.intro h2::after {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #4a2cc5;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.intro p {
+  font-size: 1.25rem;
+  color: #525252;
+}
+
+.intro-txt {
+  position: relative;
+}
+
+.intro p::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 32px;
+  background: url("../media/SVG/Decoracao-cubos.svg") no-repeat center;
+  position: absolute;
+  top: 268px;
+  left: 737px;
+}
+
+@media(max-width:1300px){
+  .intro p::after{
+    display: none;
+  }
+}
+
+@media(max-width:700px){
+  .intro{
+    grid-template-columns: 1fr;
+  }
+
+  .intro img{
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media(max-width:360px){
+  .intro-txt h2{
+    font-size: 1.5rem;
+  }
+
+  .intro img{
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

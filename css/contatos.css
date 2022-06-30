@@ -8,6 +8,7 @@
 .contatos a{
     text-decoration: none;
     color: White;
+    font-size: 1rem;
 }
 
 .contatos .container{
@@ -21,8 +22,6 @@
 }
 
 .info-contatos{
-    display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     grid-column: 2;
     grid-row: 1 / 3;
@@ -31,6 +30,24 @@
 .deco-contatos{
     max-width: 69px;
     display: inline-block;
+}
+
+.info-contatos img{
+    width: 20px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.contato-1{
+    align-items: center;
+}
+
+.contato-1{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 5px 0;
 }
 
 @media(max-width: 980px){

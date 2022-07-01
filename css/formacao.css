@@ -89,17 +89,17 @@
   transition: 0.3s;
 }
 
-.curso:hover{
+.curso:hover {
   transition: 0.3s;
   transform: scale(1.1);
 }
 
-.tecno:hover{
+.tecno:hover {
   transition: 0.3s;
   transform: scale(1.1);
 }
 
-.p-extend{
+.p-extend {
   flex: 1;
 }
 
@@ -154,11 +154,10 @@
   margin: 20px 0;
 }
 
-
-.bloco:hover{
+.bloco:hover {
   transition: 0.3s;
   transform: scale(1.03);
-  color: #4a2cc5;
+  color: rgb(121, 90, 244);
 }
 
 @media (max-width: 1080px) {

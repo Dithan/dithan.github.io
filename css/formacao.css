@@ -50,6 +50,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
+  transition: 0.3s;
 }
 
 .tecno p,
@@ -85,6 +86,17 @@
   border: 1px solid #6c6c6c;
   border-radius: 5px;
   padding: 20px;
+  transition: 0.3s;
+}
+
+.curso:hover{
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.tecno:hover{
+  transition: 0.3s;
+  transform: scale(1.1);
 }
 
 .p-extend{
@@ -140,6 +152,13 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin: 20px 0;
+}
+
+
+.bloco:hover{
+  transition: 0.3s;
+  transform: scale(1.03);
+  color: #4a2cc5;
 }
 
 @media (max-width: 1080px) {

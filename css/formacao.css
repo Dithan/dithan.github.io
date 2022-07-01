@@ -87,6 +87,10 @@
   padding: 20px;
 }
 
+.p-extend{
+  flex: 1;
+}
+
 .soft-skills,
 .hard-skills,
 .idiomas {

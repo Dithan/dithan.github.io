@@ -39,14 +39,10 @@
 }
 
 .contato-1 {
-  align-items: center;
-}
-
-.contato-1 {
   display: grid;
   grid-template-columns: auto 1fr;
   justify-content: start;
-  align-items: flex-start;
+  align-items: center;
   padding: 5px 0;
 }
 

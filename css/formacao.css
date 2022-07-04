@@ -113,6 +113,7 @@
   color: #cccccc;
   font-size: 1.25rem;
   position: relative;
+  transition: 0.3s;
 }
 
 .titulo-3::before {
@@ -121,9 +122,13 @@
   width: 5px;
   height: 16px;
   background: #4a2cc5;
-  position: absolute;
-  left: -20px;
-  top: 4px;
+  margin-right: 16px;
+  transition: 0.3s;
+}
+
+.titulo-3:hover:before{
+  width: 20px;
+  transition: 0.3s;
 }
 
 .grade-2 {
@@ -154,11 +159,15 @@
   margin: 20px 0;
 }
 
+.bloco{
+  transition: 0.3s;
+}
+
 .bloco:hover {
   transition: 0.3s;
-  transform: scale(1.03);
-  color: rgb(121, 90, 244);
+  transform: scale(1.01);
 }
+
 
 @media (max-width: 1080px) {
   .grade {

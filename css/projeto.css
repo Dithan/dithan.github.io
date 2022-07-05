@@ -6,13 +6,16 @@
   padding: 20px;
 }
 
-.deco-cinza {
-  margin: 120px auto;
+.linha-azul {
+  background-color: #4a2cc5;
+}
+
+.linha {
+  margin: 80px auto 120px auto;
   display: block;
   content: "";
   width: 960px;
   height: 3px;
-  background-color: #4a2cc5;
 }
 
 .projetos h2 {
@@ -72,13 +75,10 @@
 .linguagens {
   display: flex;
   flex-wrap: wrap;
-  text-align: right;
-  justify-content: end;
-  align-items: start;
   flex-direction: row;
   gap: 20px;
   align-self: flex-end;
-  padding-left: 100px;
+  justify-content: center;
 }
 
 .linguagens p:hover {
@@ -97,9 +97,24 @@
   transition: 0.3s;
 }
 
+.lg-projetos {
+  justify-content: end;
+  padding-left: 100px;
+}
+
 @media (max-width: 1080px) {
   .telecall {
     grid-template-columns: 1fr;
+    max-width: 400px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #4a2cc5;
+    border-radius: 5px;
+  }
+
+  .espaco {
+    display: none;
   }
 
   .telecall-img,
@@ -109,7 +124,11 @@
     justify-self: center;
   }
 
-  .linguagens{
+  .telecall p {
+    font-size: 1.25rem;
+  }
+
+  .lg-projetos {
     padding: 0;
   }
 
@@ -121,31 +140,28 @@
 }
 
 @media (max-width: 1000px) {
-  .deco-cinza {
+  .linha-azul {
     width: 700px;
   }
 }
 
 @media (max-width: 750px) {
-  .deco-cinza {
+  .linha-azul {
     width: 400px;
-  }
-
-  .telecall-img {
-    max-width: 400px;
   }
 }
 
 @media (max-width: 450px) {
-  .deco-cinza {
+  .linha-azul {
     width: 250px;
   }
 
-  .telecall-img {
-    max-width: 200px;
+  .linguagens{
+    gap: 10px;
   }
 
-  .telecall p {
+  .telecall p,
+  .linguagens p {
     font-size: 1rem;
   }
 }

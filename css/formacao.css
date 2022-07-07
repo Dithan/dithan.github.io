@@ -195,7 +195,7 @@
   .soft-skills,
   .hard-skills,
   .idiomas {
-    padding: 0px;
+    padding: 20px;
   }
 
   .soft-skills p,
@@ -241,14 +241,19 @@
   }
 
   .grade {
-    gap: 20px;
+    gap: 15px;
+    grid-template-columns: 1fr;
   }
-
+  .tecno {
+    grid-column: 1;
+  }
   .grade-2,
   .grade-3 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
+
+
 
 @media (max-width: 400px) {
   .formacao h2 {
@@ -277,17 +282,5 @@
   .curso .time,
   .tecno .time {
     font-size: 0.75rem;
-  }
-
-  .grade {
-    gap: 15px;
-    grid-template-columns: 1fr;
-  }
-  .tecno {
-    grid-column: 1;
-  }
-  .grade-2,
-  .grade-3 {
-    grid-template-columns: 1fr;
   }
 }

@@ -3,7 +3,7 @@
 .formacao {
   background: #141414;
   color: white;
-  padding: 120px 40px;
+  padding: 120px 20px;
 }
 
 .container {
@@ -126,7 +126,7 @@
   transition: 0.3s;
 }
 
-.titulo-3:hover:before{
+.titulo-3:hover:before {
   width: 20px;
   transition: 0.3s;
 }
@@ -159,7 +159,7 @@
   margin: 20px 0;
 }
 
-.bloco{
+.bloco {
   transition: 0.3s;
 }
 
@@ -167,7 +167,6 @@
   transition: 0.3s;
   transform: scale(1.01);
 }
-
 
 @media (max-width: 1080px) {
   .grade {
@@ -193,6 +192,12 @@
     height: 10px;
   }
 
+  .soft-skills,
+  .hard-skills,
+  .idiomas {
+    padding: 0px;
+  }
+
   .soft-skills p,
   .hard-skills p,
   .idiomas p {
@@ -211,6 +216,11 @@
     height: 8px;
   }
 
+  .curso,
+  .tecno {
+    gap: 10px;
+  }
+
   .tecno p,
   .curso p {
     font-size: 1rem;
@@ -218,7 +228,7 @@
 
   .tecno p strong,
   .curso p strong {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .titulo-fraco {

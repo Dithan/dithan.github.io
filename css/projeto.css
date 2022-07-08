@@ -64,20 +64,20 @@
   transition: 0.3s;
 }
 
-.telecall h3 {
+.projeto-impar h3 {
   text-align: right;
 }
 
-.telecall picture {
+.projeto-impar picture {
   grid-column: 2;
   justify-self: right;
 }
 
-.telecall p {
+.projeto-impar p {
   text-align: right;
 }
 
-.telecall .linguagens {
+.projeto-impar .linguagens {
   justify-content: end;
 }
 
@@ -93,7 +93,7 @@
   }
 
   .projetos-lista picture,
-  .telecall picture {
+  .projeto-impar picture {
     grid-column: initial;
     grid-row: 3;
     justify-content: center;
@@ -119,7 +119,7 @@
   }
 
   .linguagens,
-  .telecall .linguagens,
+  .projeto-impar .linguagens,
   .projetos-unidade h3{
     justify-content: center;
     margin: 0 auto;
@@ -135,6 +135,7 @@
 
 @media (max-width: 490px){
   .projetos-unidade{
+    grid-template-rows: 72px 182px auto 86px;
     width: 300px;
   }
 

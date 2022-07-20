@@ -35,8 +35,7 @@
   height: 32px;
   background: url("../media/SVG/Decoracao-cubos.svg") no-repeat center;
   position: absolute;
-  top: 268px;
-  left: 737px;
+  right: 0px;
 }
 
 @media(max-width:1300px){

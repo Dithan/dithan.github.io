@@ -131,7 +131,8 @@
     position: absolute;
     top: -30px;
     right: 30px;
-    color: #4b2cc599;
+    color: #4a2cc5;
+    font-size: 1.25rem;
     animation: seta 0.5s ease-in 0s infinite alternate;
   }
 

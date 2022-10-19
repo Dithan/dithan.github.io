@@ -10,7 +10,8 @@ body {
 h1,
 h1,
 h3,
-p {
+p,
+a {
   margin: 0px;
   letter-spacing: 0.14rem;
 }
@@ -26,7 +27,7 @@ img {
   display: block;
 }
 
-a{
+a {
   text-decoration: none;
   color: #141414;
   font-size: 1.75rem;
@@ -50,34 +51,32 @@ a{
   color: #525252;
 }
 
-
-@media(max-width:1080px){
-  .linha{
+@media (max-width: 1080px) {
+  .linha {
     width: 600px;
   }
 }
 
-@media(max-width:700px){
-  .linha{
+@media (max-width: 700px) {
+  .linha {
     width: 400px;
   }
 }
 
-@media(max-width:480px){
-  .linha{
+@media (max-width: 480px) {
+  .linha {
     width: 300px;
   }
 }
 
-@media(max-width:360px){
-  .linha{
+@media (max-width: 360px) {
+  .linha {
     width: 200px;
   }
 }
 
-@media(max-width:250px){
-  .linha{
+@media (max-width: 250px) {
+  .linha {
     display: none;
   }
 }
-

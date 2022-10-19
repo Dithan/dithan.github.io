@@ -14,23 +14,20 @@
   background: #4a2cc5;
 }
 
-.linha-azul {
-  background-color: #4a2cc5;
-}
-
 .projetos-unidade {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-.projetos-unidade picture {
+.projetos-unidade picture img {
   transition: 0.3s;
 }
 
-.projetos-unidade picture:hover {
+.projetos-unidade picture img:hover {
   transition: 0.3s;
   transform: scale(1.1);
+  box-shadow: 20px 20px 20px -20px #00000070;
 }
 
 .projetos-lista li + li {
@@ -46,20 +43,18 @@
   align-self: flex-end;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0px 10px;
 }
 
 .linguagens p {
   display: inline-block;
-  border: 2px solid #4a2cc5;
-  border-radius: 4px;
-  padding: 6px 12px;
+  padding: 5px 5px;
   font-weight: bold;
   transition: 0.3s;
 }
 
 .linguagens p:hover {
-  background: linear-gradient(#8161ff, #4a2cc5);
+  color: #4a2cc5;
   transform: scale(1.05);
   transition: 0.3s;
 }
@@ -96,6 +91,7 @@
     grid-template-columns: 1fr;
     width: 570px;
     justify-content: center;
+    align-items: center;
     border: 2px solid #4a2cc5;
     border-radius: 4px;
     padding: 20px;
@@ -151,22 +147,19 @@
 
 @media (max-width: 740px) {
   .projetos-unidade {
-    grid-template-rows: auto 182px auto 86px;
+    grid-template-rows: auto 168px auto 64px;
+    gap: 10px;
     width: 400px;
   }
 }
 
 @media (max-width: 490px) {
   .projetos-unidade {
-    grid-template-rows: 72px 182px auto 86px;
+    grid-template-rows: 72px 168px auto 64px;
     width: 300px;
   }
 
   .projetos-unidade .paragrafo {
     font-size: 1rem;
-  }
-
-  .linha {
-    margin: 40px auto 80px auto;
   }
 }

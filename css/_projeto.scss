@@ -6,9 +6,15 @@
   padding: 20px;
 }
 
+.projetos .role {
+  display: none;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
 .projetos h2::after {
   display: block;
-  content: "";
+  content: '';
   width: 100px;
   height: 4px;
   background: #4a2cc5;
@@ -35,7 +41,7 @@
 }
 
 .projetos-lista picture {
-  grid-row: 1 / 4;
+  grid-row: 1 / 5;
   max-width: 600px;
 }
 
@@ -59,6 +65,27 @@
   transition: 0.3s;
 }
 
+.codeBtns {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 25px;
+  grid-column: 2;
+  justify-self: flex-start;
+  align-self: flex-end;
+
+  .btncode {
+    padding: 10px;
+    border-radius: 50%;
+
+    img {
+      display: block;
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
 .projeto-impar h3 {
   text-align: right;
 }
@@ -76,6 +103,11 @@
   justify-content: end;
 }
 
+.projeto-impar .codeBtns{
+  grid-column: 1;
+  justify-self: flex-end;
+}
+
 @keyframes seta {
   from {
     right: 30px;
@@ -86,6 +118,14 @@
 }
 
 @media (max-width: 1080px) {
+  .projetos h2 {
+    margin-bottom: 10px;
+  }
+
+  .projetos .role {
+    display: inline-block;
+  }
+
   .projetos-unidade {
     display: grid;
     grid-template-columns: 1fr;
@@ -123,9 +163,10 @@
   }
 
   .proj::after {
-    content: "→";
+    content: '→';
+    font-weight: bold;
     position: absolute;
-    top: -30px;
+    top: -35px;
     right: 30px;
     color: #4a2cc5;
     font-size: 1.25rem;
@@ -142,6 +183,15 @@
   .projetos-unidade h3 {
     justify-content: center;
     margin: 0 auto;
+  }
+
+  .linguagens {
+    align-self: center;
+  }
+
+  .projeto-impar .codeBtns, .projetos-unidade .codeBtns{
+    grid-column: 1;
+    justify-self: center;
   }
 }
 

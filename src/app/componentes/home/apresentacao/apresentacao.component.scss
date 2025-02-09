@@ -1,6 +1,22 @@
 .apresentacao-secao {
   position: relative;
   padding-top: 183px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: -220px;
+    background: radial-gradient(#4a2cc5, #5a83eb);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    z-index: -1;
+  }
 }
 // .apresentacao-container {
 // }

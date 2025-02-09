@@ -1,0 +1,94 @@
+/* Estilos Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0e1113, #202427);
+  min-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+
+  min-height: 3000px;
+}
+
+h1,
+h1,
+h3,
+p,
+a {
+  margin: 0px;
+  letter-spacing: 0.14rem;
+  color: #fff;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: #141414;
+  font-size: 1.75rem;
+}
+
+.texto {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+// Controla o tamanho dos elementos na tela
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Barra de rolagem
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3e4246;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--cor-primaria);
+  border-radius: 5px;
+  border: 3px solid #3e4246;
+}
+
+/* barra de rolagem hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cor-primaria);
+}
+
+// Seleção de Texto
+/* Seleção para navegadores modernos */
+::selection {
+  background-color: var(--cor-primaria); /* Cor de fundo da seleção */
+  color: #ffffff; /* Cor do texto da seleção */
+}
+
+/* Seleção para navegadores mais antigos */
+::-moz-selection {
+  background-color: var(
+    --cor-primaria
+  ); /* Cor de fundo da seleção para Firefox */
+  color: #ffffff; /* Cor do texto da seleção para Firefox */
+}

@@ -1,0 +1,68 @@
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+}
+
+.btn-primario {
+  position: relative;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 5px 24px;
+  border-radius: 5px;
+  background: #0e1114;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    border-radius: 5px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background: linear-gradient(195deg, #96c7f3, #4426bc, #96c7f3, #4426bc);
+    background-size: 200%;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: -1;
+  }
+
+  &::after {
+    filter: blur(3px);
+    animation: borda-animada 15s linear infinite;
+    transition: 0.3s ease-out;
+  }
+
+  &:hover::after {
+    filter: blur(10px);
+  }
+}
+
+.btn-github {
+  &::before,
+  &::after {
+    background: linear-gradient(195deg, #ffffff, #adadad, #ffffff, #adadad);
+  }
+}
+
+.btn-linkedin {
+  &::before,
+  &::after {
+    background: linear-gradient(195deg, #3baae8, #026fab, #3baae8, #026fab);
+  }
+}
+
+@keyframes borda-animada {
+  0% {
+    background-position: 0;
+  }
+
+  50% {
+    background-position: 300%;
+  }
+
+  100% {
+    background-position: 0;
+  }
+}

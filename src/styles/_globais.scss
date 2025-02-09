@@ -9,8 +9,6 @@ body {
   background: linear-gradient(135deg, #0e1113, #202427);
   min-height: 100vh;
   font-family: "Ubuntu", sans-serif;
-
-  min-height: 3000px;
 }
 
 h1,
@@ -42,16 +40,30 @@ a {
   font-size: 1.75rem;
 }
 
+// CLASSES UTEIS
+.secao {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .titulo {
   font-size: 40px;
   color: #fff;
   font-weight: 300;
   margin-bottom: 40px;
+
+  &.center {
+    text-align: center;
+  }
 }
 
 .texto {
   font-size: 24px;
   font-weight: 300;
+
+  &.center {
+    text-align: center;
+  }
 }
 
 // Controla o tamanho dos elementos na tela

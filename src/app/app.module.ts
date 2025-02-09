@@ -7,6 +7,7 @@ import { HeaderComponent } from './componentes/estrutura/header/header.component
 import { HomeComponent } from './componentes/home/home.component';
 import { ApresentacaoComponent } from './componentes/home/apresentacao/apresentacao.component';
 import { SobreComponent } from './componentes/home/sobre/sobre.component';
+import { SkillsComponent } from './componentes/home/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SobreComponent } from './componentes/home/sobre/sobre.component';
     HomeComponent,
     ApresentacaoComponent,
     SobreComponent,
+    SkillsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

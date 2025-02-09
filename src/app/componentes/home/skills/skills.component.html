@@ -1,0 +1,24 @@
+<section class="skills-secao secao">
+  <div class="container">
+    <h2 class="titulo center">Minhas Skills</h2>
+  </div>
+
+  <div class="skills-carrossel">
+    <ul class="skills-lista">
+
+      <li *ngFor="let skill of skills" class="skill">
+        <picture class="skill-img"><img [src]="skill.img" [alt]="skill.titulo" width="100px" height="100px">
+        </picture>
+        <p class="skill-tit">{{ skill.titulo }}</p>
+      </li>
+
+      <!-- Lista duplicada -->
+      <li *ngFor="let skill of skills" class="skill">
+        <picture class="skill-img">
+          <img [src]="skill.img" [alt]="skill.titulo" width="100px" height="100px">
+        </picture>
+        <p class="skill-tit">{{ skill.titulo }}</p>
+      </li>
+    </ul>
+  </div>
+</section>

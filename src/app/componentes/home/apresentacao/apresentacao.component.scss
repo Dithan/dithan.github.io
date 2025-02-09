@@ -47,11 +47,19 @@
   gap: 20px;
   color: #fff;
   font-size: 32px;
+  font-weight: 300;
 
   img {
     display: block;
     width: 26px;
     height: 18px;
+    transition: 0.3s ease-out;
+  }
+
+  &:hover {
+    img {
+      margin-top: 5px;
+    }
   }
 }
 

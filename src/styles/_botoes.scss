@@ -20,7 +20,7 @@
     border-radius: 5px;
     width: calc(100% + 2px);
     height: calc(100% + 2px);
-    background: linear-gradient(195deg, #96c7f3, #4426bc, #96c7f3, #4426bc);
+    background: linear-gradient(135deg, #96c7f3, #4426bc, #96c7f3);
     background-size: 200%;
     position: absolute;
     top: -1px;
@@ -42,14 +42,54 @@
 .btn-github {
   &::before,
   &::after {
-    background: linear-gradient(195deg, #ffffff, #adadad, #ffffff, #adadad);
+    content: "";
+    display: block;
+    border-radius: 5px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background: linear-gradient(135deg, #ffffff, #868686, #ffffff);
+    background-size: 200%;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: -1;
+  }
+
+  &::after {
+    filter: blur(3px);
+    animation: borda-animada 15s linear infinite;
+    transition: 0.3s ease-out;
+  }
+
+  &:hover::after {
+    filter: blur(10px);
   }
 }
 
 .btn-linkedin {
   &::before,
   &::after {
-    background: linear-gradient(195deg, #3baae8, #026fab, #3baae8, #026fab);
+    content: "";
+    display: block;
+    border-radius: 5px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background: linear-gradient(195deg, #3baae8, #00649a, #3baae8);
+    background-size: 200%;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: -1;
+  }
+
+  &::after {
+    filter: blur(3px);
+    animation: borda-animada 15s linear infinite;
+    transition: 0.3s ease-out;
+  }
+
+  &:hover::after {
+    filter: blur(10px);
   }
 }
 

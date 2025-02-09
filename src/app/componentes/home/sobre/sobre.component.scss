@@ -35,7 +35,15 @@
     border-radius: 5px;
     width: calc(100% + 2px);
     height: calc(100% + 2px);
-    background: linear-gradient(195deg, #96c7f3, #4426bc, #96c7f3, #4426bc);
+    background: linear-gradient(
+      195deg,
+      #96c7f3,
+      #4426bc,
+      #96c7f3,
+      #4426bc,
+      #96c7f3,
+      #4426bc
+    );
     background-size: 200%;
     position: absolute;
     top: -1px;

@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   padding: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
@@ -33,7 +33,7 @@
 
   p {
     text-align: center;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 }
 
@@ -41,9 +41,9 @@
   position: absolute;
   background: linear-gradient(to right, #96c7f3, #4426bc);
   border-radius: 15px;
-  width: 50%;
+  width: calc(50%);
   height: 30px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #check:checked ~ .switch .slider {

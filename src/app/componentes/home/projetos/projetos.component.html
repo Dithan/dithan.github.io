@@ -3,7 +3,7 @@
     <h2 class="titulo center">Projetos</h2>
 
     <div class="projetos-botao">
-      <input type="checkbox" id="check">
+      <input type="checkbox" id="check" (change)="isChecked = !isChecked">
       <label for="check" class="switch">
         <div class="projetos-textos">
           <p>Apps</p>
@@ -11,6 +11,24 @@
         </div>
         <span class="slider"></span>
       </label>
+    </div>
+
+    <div class="projetos-lista" *ngIf="isChecked">
+      <div class="projeto-item" *ngFor="let projetoItem of projetosApps">
+        <picture class="projeto-img">
+          <img src="{{ projetoItem.img }}" alt="">
+        </picture>
+        <div class="projeto-txts">
+          <h3>{{ projetoItem.titulo }}</h3>
+          <p>{{ projetoItem.texto }}</p>
+          <span>{{ projetoItem.tech }}</span>
+
+          <div class="btn-container">
+            <a href="{{ projetoItem.preview }}" class="btn-primario"><img src="./img/preview.svg" alt="">Preview</a>
+            <a href="{{ projetoItem.github }}" class="btn-primario"><img src="./img/github.svg" alt="">github</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

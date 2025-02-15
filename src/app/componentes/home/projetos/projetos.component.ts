@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './projetos.component.scss',
 })
 export class ProjetosComponent {
+  isChecked: boolean = true;
+
   // {
   //   titulo: '',
   //   img: '',
@@ -21,7 +23,7 @@ export class ProjetosComponent {
       img: './img/projetos/iquiz.jpg',
       texto:
         'Esté é um mini quiz sobre Swift com UIKit, desenvolvido em Swift com StoryBoard, primeiro projeto para iOS',
-      tech: 'Swift - StorBoard',
+      tech: 'Swift - StoryBoard',
       preview: '',
       github: 'https://github.com/Dithan/iQuiz',
     },
@@ -29,7 +31,7 @@ export class ProjetosComponent {
       titulo: 'Cinetopia',
       img: './img/projetos/cinetopia.jpg',
       texto:
-        'App fictício Cinetopia, desenvolvido com intúito educativo (apenas visual). Aqui você pode encontrar filmes e sinopses, pode também marca-los como favoritos para vizualizar posteriormente. Desenvolvido em Swift com UIKit / View Code.',
+        'App fictício Cinetopia. Aqui você pode encontrar filmes, sinopses e também marca-los como favoritos para vizualizar posteriormente.',
       tech: 'Swift - UIKit',
       preview: '',
       github: 'https://github.com/Dithan/cinetopia',
@@ -48,9 +50,20 @@ export class ProjetosComponent {
       img: './img/projetos/banco-douro.jpg',
       texto:
         "App de um banco fictício chamado Banco D'Ouro. Projeto desenvolvido durante o curso de Flutter da Alura. Neste projeto, criei telas, widgets, implementei navegação entre telas, validação de formulários, trabalhei com dados assíncronos e mais.",
-      tech: 'Flutter',
+      tech: 'Dart - Flutter',
       preview: '',
       github: 'https://github.com/Dithan/banco-douro',
+    },
+  ];
+
+  projetosSites = [
+    {
+      titulo: '',
+      img: '',
+      texto: '',
+      tech: '',
+      preview: '',
+      github: '',
     },
   ];
 }

@@ -12,6 +12,11 @@
   padding: 5px 24px;
   border-radius: 5px;
   background: #0e1114;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #fff;
 
   &::before,
   &::after {
@@ -36,6 +41,11 @@
 
   &:hover::after {
     filter: blur(10px);
+  }
+
+  img {
+    width: 15px;
+    object-fit: contain;
   }
 }
 

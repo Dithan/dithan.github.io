@@ -69,6 +69,7 @@
   border-radius: 15px;
   padding: 25px;
   position: relative;
+  margin: 20px 0 40px;
 
   &::before,
   &::after {
@@ -139,4 +140,13 @@
 .projeto-item .btn-primario {
   font-size: 16px;
   padding: 5px 10px;
+}
+
+// SWIPER (CARROSSEL)
+swiper-container::part(bullet-active) {
+  background-color: var(--cor-primaria);
+}
+
+swiper-container::part(bullet) {
+  background-color: #fff;
 }

@@ -13,22 +13,64 @@
       </label>
     </div>
 
-    <div class="projetos-lista" *ngIf="isChecked">
-      <div class="projeto-item" *ngFor="let projetoItem of projetosApps">
-        <picture class="projeto-img">
-          <img src="{{ projetoItem.img }}" alt="">
-        </picture>
-        <div class="projeto-txts">
-          <h3>{{ projetoItem.titulo }}</h3>
-          <p>{{ projetoItem.texto }}</p>
-          <span>{{ projetoItem.tech }}</span>
+    <!-- Projetos Apps -->
+    <swiper-container navigation="true" slides-per-view="3" pagination="true" effect="coverflow" centered-slides="true"
+      coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+      coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false" *ngIf="isChecked">
 
-          <div class="btn-container">
-            <a href="{{ projetoItem.preview }}" class="btn-primario"><img src="./img/preview.svg" alt="">Preview</a>
-            <a href="{{ projetoItem.github }}" class="btn-primario"><img src="./img/github.svg" alt="">github</a>
+      <swiper-slide lazy="true" *ngFor="let projetoItem of projetosApps">
+        <div class="projeto-item">
+          <picture class="projeto-img">
+            <img src="{{ projetoItem.img }}" alt="" loading="lazy">
+          </picture>
+          <div class="projeto-txts">
+            <h3>{{ projetoItem.titulo }}</h3>
+            <p>{{ projetoItem.texto }}</p>
+            <span>{{ projetoItem.tech }}</span>
+
+            <div class="btn-container">
+              <a href="{{ projetoItem.preview }}"
+                [ngClass]="{'btn-primario': true, 'btn-disable': projetoItem.preview === ''}"><img
+                  src="./img/preview.svg" alt="">Preview</a>
+              <a href="{{ projetoItem.github }}"
+                [ngClass]="{'btn-primario': true, 'btn-disable': projetoItem.github === ''}"><img src="./img/github.svg"
+                  alt="">github</a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </swiper-slide>
+
+    </swiper-container>
+    <!-- // Projetos Apps -->
+
+    <!-- Projetos Sites -->
+    <swiper-container navigation="true" slides-per-view="3" pagination="true" effect="coverflow" centered-slides="true"
+      coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+      coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false" *ngIf="!isChecked">
+
+      <swiper-slide lazy="true" *ngFor="let projetoItem of projetosSites">
+        <div class="projeto-item">
+          <picture class="projeto-img">
+            <img src="{{ projetoItem.img }}" alt="" loading="lazy">
+          </picture>
+          <div class="projeto-txts">
+            <h3>{{ projetoItem.titulo }}</h3>
+            <p>{{ projetoItem.texto }}</p>
+            <span>{{ projetoItem.tech }}</span>
+
+            <div class="btn-container">
+              <a href="{{ projetoItem.preview }}"
+                [ngClass]="{'btn-primario': true, 'btn-disable': projetoItem.preview === ''}"><img
+                  src="./img/preview.svg" alt="">Preview</a>
+              <a href="{{ projetoItem.github }}"
+                [ngClass]="{'btn-primario': true, 'btn-disable': projetoItem.github === ''}"><img src="./img/github.svg"
+                  alt="">github</a>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+
+    </swiper-container>
+    <!-- // Projetos Sites -->
   </div>
 </section>

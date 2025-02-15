@@ -58,11 +58,11 @@ export class ProjetosComponent {
 
   projetosSites = [
     {
-      titulo: '',
-      img: '',
-      texto: '',
-      tech: '',
-      preview: '',
+      titulo: 'teste',
+      img: 'teste',
+      texto: 'test',
+      tech: 'teste',
+      preview: 'teste',
       github: '',
     },
   ];

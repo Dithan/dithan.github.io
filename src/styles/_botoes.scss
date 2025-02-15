@@ -49,6 +49,29 @@
   }
 }
 
+.btn-primario.btn-disable {
+  cursor: default;
+  pointer-events: none;
+  color: #8d8d8d;
+
+  &::before,
+  &::after {
+    background: #ccc;
+    opacity: 0.2;
+  }
+
+  &::after {
+    filter: blur(0px);
+  }
+
+  &:hover::after {
+    filter: blur(0px);
+  }
+
+  img {
+    opacity: 0.4;
+  }
+}
 .btn-github {
   &::before,
   &::after {

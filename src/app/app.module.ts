@@ -9,6 +9,7 @@ import { ApresentacaoComponent } from './componentes/home/apresentacao/apresenta
 import { SobreComponent } from './componentes/home/sobre/sobre.component';
 import { SkillsComponent } from './componentes/home/skills/skills.component';
 import { ProjetosComponent } from './componentes/home/projetos/projetos.component';
+import { FormacaoComponent } from './componentes/home/formacao/formacao.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProjetosComponent } from './componentes/home/projetos/projetos.componen
     SobreComponent,
     SkillsComponent,
     ProjetosComponent,
+    FormacaoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

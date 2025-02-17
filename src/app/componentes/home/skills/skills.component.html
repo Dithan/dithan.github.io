@@ -4,21 +4,29 @@
   </div>
 
   <div class="skills-carrossel">
-    <ul class="skills-lista">
+    <swiper-container class="mySwiper swiper-skills" pagination="false" slides-per-view="5" space-between="30"
+      free-mode="true" loop="true" autoplay-delay="2500" autoplay-disable-on-interaction="false" [breakpoints]="{
+        '1024': {
+          'slidesPerView': 5
+        },
+        '768': {
+          'slidesPerView': 4
+        },
+        '425': {
+          'slidesPerView': 3
+        },
+        '1': {
+          'slidesPerView': 3
+        }
+      }">
 
-      <li *ngFor="let skill of skills" class="skill">
+      <swiper-slide *ngFor="let skill of skills" class="skill">
         <picture class="skill-img"><img [src]="skill.img" [alt]="skill.titulo" width="100px" height="100px">
         </picture>
         <p class="skill-tit">{{ skill.titulo }}</p>
-      </li>
+      </swiper-slide>
 
-      <!-- Lista duplicada -->
-      <li *ngFor="let skill of skills" class="skill">
-        <picture class="skill-img">
-          <img [src]="skill.img" [alt]="skill.titulo" width="100px" height="100px">
-        </picture>
-        <p class="skill-tit">{{ skill.titulo }}</p>
-      </li>
-    </ul>
+    </swiper-container>
+
   </div>
 </section>

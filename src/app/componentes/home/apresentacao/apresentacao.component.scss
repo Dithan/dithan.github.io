@@ -63,11 +63,41 @@
   }
 }
 
-.apresentação-img {
+.apresentacao-img {
   position: absolute;
-  width: auto;
+  width: 50%;
   height: calc(100% - 113px);
   top: 0;
   right: 0;
   margin-top: 113px;
+
+  img {
+    object-position: left;
+  }
+}
+
+@media (max-width: 1024px) {
+  .apresentacao-img {
+    display: none;
+  }
+}
+
+// TABLET
+@media (max-width: 768px) {
+  .apresentacao-texto {
+    margin-bottom: 40px;
+  }
+
+  .apresentacao-titulo {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .apresentacao-container .btn-container {
+    margin-bottom: 40px;
+  }
+}
+
+// MOBILE
+@media (max-width: 425px) {
 }

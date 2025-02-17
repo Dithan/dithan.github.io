@@ -89,7 +89,7 @@
   border-radius: 15px;
   padding: 25px;
   position: relative;
-  margin: 20px 0 40px;
+  margin: 20px auto 40px;
 
   &::before,
   &::after {
@@ -163,10 +163,23 @@
 }
 
 // SWIPER (CARROSSEL)
+
 swiper-container::part(bullet-active) {
   background-color: var(--cor-primaria);
 }
 
 swiper-container::part(bullet) {
   background-color: #fff;
+}
+
+// TABLET
+@media (max-width: 768px) {
+  .projeto-item {
+    width: 385px;
+    margin: 20px auto 40px;
+  }
+}
+
+// MOBILE
+@media (max-width: 425px) {
 }

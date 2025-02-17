@@ -1,23 +1,10 @@
 .skills-secao {
-
 }
 
 .skills-carrossel {
   max-width: 1200px;
   overflow: hidden;
   margin: 0 auto;
-}
-
-.skills-lista {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 220px;
-  justify-items: stretch;
-  animation: gira-carrossel 30s linear infinite;
-}
-
-.skills-carrossel:hover .skills-lista {
-  animation-play-state: paused;
 }
 
 .skill {
@@ -38,12 +25,11 @@
   font-size: 20px;
 }
 
-@keyframes gira-carrossel {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
+// SWIPER (CARROSSEL)
+swiper-container::part(bullet-active) {
+  background-color: var(--cor-primaria);
+}
 
-  100% {
-    transform: translate3d(-220%, 0, 0);
-  }
+swiper-container::part(bullet) {
+  background-color: #fff;
 }

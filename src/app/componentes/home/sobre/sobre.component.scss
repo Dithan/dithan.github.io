@@ -98,3 +98,25 @@
     background-position: 0;
   }
 }
+
+// TABLET
+@media (max-width: 768px) {
+  .sobre-secao::before {
+    top: 130px;
+  }
+  .sobre-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sobre-fotos {
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+
+// MOBILE
+@media (max-width: 425px) {
+}

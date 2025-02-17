@@ -4,12 +4,25 @@
       <picture class="logo"><img src="./img/logo.svg" alt=""></picture>
     </a>
 
-    <nav>
+    <nav class="menu-desktop">
       <ul class="header-menu">
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#formacao">Formação</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
+
+    <!-- Menu Mobile -->
+    <div class="header-mobile">
+      <button [ngClass]="{'abre-menu': true, 'active': menuAtivo}" (click)="menuAtivo = !menuAtivo"></button>
+      <nav [ngClass]="{'menu-mobile': true, 'active': menuAtivo}">
+        <ul class="header-menu">
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+
   </div>
 </header>

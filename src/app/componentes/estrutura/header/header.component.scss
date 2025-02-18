@@ -116,14 +116,13 @@
     height: 2px;
     background: #fff;
     position: absolute;
-    left: 0;
-    top: -8px;
-    transition: 0.3s ease-out;
+    transition: 0.6s ease-out;
+    will-change: transform;
+    transform: translate(0px, -8px);
   }
 
   &::after {
-    top: auto;
-    bottom: -8px;
+    transform: translate(0, 6px);
   }
 }
 
@@ -149,10 +148,11 @@
   position: absolute;
   top: 89px;
   left: 0;
-  width: 0%;
-  height: 100vh;
-  padding: 20px 0px;
-  transition: 0.3s ease-out;
+  width: 100%;
+  height: calc(100vh - 87px);
+  padding: 20px;
+  transition: 0.6s ease-out;
+  transform: translateX(-100vw);
 
   ul {
     display: flex;
@@ -171,8 +171,7 @@
 
   &.active {
     display: block;
-    width: 100%;
-    padding: 20px;
+    transform: translateX(0);
   }
 }
 
@@ -195,5 +194,14 @@
 
   .header-mobile {
     display: block;
+  }
+
+  .header .logo {
+    width: 118px;
+    padding: 15px 0;
+  }
+
+  .menu-mobile {
+    top: 63px;
   }
 }

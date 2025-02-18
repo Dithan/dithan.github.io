@@ -84,12 +84,10 @@
 
 // TABLET
 @media (max-width: 768px) {
-  .apresentacao-secao{
+  .apresentacao-secao {
     &::before {
-
       width: 400px;
       height: 400px;
-
     }
   }
   .apresentacao-texto,
@@ -112,6 +110,9 @@
 
 // MOBILE
 @media (max-width: 480px) {
+  .apresentacao-secao {
+    padding-top: 140px;
+  }
   .apresentacao-texto {
     font-size: 24px;
     max-width: 20ch;

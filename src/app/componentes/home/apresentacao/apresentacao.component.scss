@@ -80,10 +80,7 @@
   .apresentacao-img {
     display: none;
   }
-}
 
-// TABLET
-@media (max-width: 768px) {
   .apresentacao-secao {
     &::before {
       width: 400px;

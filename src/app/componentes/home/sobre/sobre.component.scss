@@ -27,6 +27,8 @@
 
 .sobre-fotos {
   position: relative;
+  width: 350px;
+  height: 350px;
 
   &::before,
   &::after {
@@ -117,6 +119,7 @@
 
   .sobre-fotos {
     width: 350px;
+    height: 350px;
     margin: 0 auto;
   }
 }

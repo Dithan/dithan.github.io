@@ -4,33 +4,60 @@
     <div class="contato-grid">
 
       <div class="contato-form">
-        <form action="">
+        <form action="javascript:void(0)" (submit)="send()" [formGroup]="form">
           <h2 class="titulo">Vamos Trabalhar Juntos</h2>
           <p>Minha paixão é desenvolver de forma simples e eficiente. Vamos conversar!</p>
 
           <div class="input-grid">
             <div class="input-container">
               <label for="nome">Nome</label>
-              <input type="text" id="nome">
+              <input type="text" id="nome" formControlName="from_name"
+                [class.invalid]="form.get('from_name')?.invalid && form.get('from_name')?.touched">
+              <small class="error-message" *ngIf="form.get('from_name')?.invalid && form.get('from_name')?.touched">
+                <span *ngIf="form.get('from_name')?.errors?.['required']">Nome é obrigatório</span>
+                <span *ngIf="form.get('from_name')?.errors?.['minlength']">Nome deve ter pelo menos 2 caracteres</span>
+              </small>
             </div>
 
             <div class="input-container">
               <label for="telefone">Telefone</label>
-              <input type="tel" id="telefone">
+              <input type="tel" id="telefone" formControlName="from_tel" placeholder="Ex: 21987654321"
+                [class.invalid]="form.get('from_tel')?.invalid && form.get('from_tel')?.touched">
+              <small class="error-message" *ngIf="form.get('from_tel')?.invalid && form.get('from_tel')?.touched">
+                <span *ngIf="form.get('from_tel')?.errors?.['required']">Telefone é obrigatório</span>
+                <span *ngIf="form.get('from_tel')?.errors?.['pattern']">Formato inválido</span>
+              </small>
             </div>
           </div>
 
           <div class="input-container">
             <label for="email">E-mail</label>
-            <input type="email" id="email">
+            <input type="email" id="email" formControlName="from_email"
+              [class.invalid]="form.get('from_email')?.invalid && form.get('from_email')?.touched">
+            <small class="error-message" *ngIf="form.get('from_email')?.invalid && form.get('from_email')?.touched">
+              <span *ngIf="form.get('from_email')?.errors?.['required']">E-mail é obrigatório</span>
+              <span *ngIf="form.get('from_email')?.errors?.['email']">E-mail inválido</span>
+            </small>
           </div>
 
           <div class="input-container">
             <label for="mensagem">Mensagem</label>
-            <textarea name="mensagem" id="mensagem"></textarea>
+            <textarea name="mensagem" id="mensagem" formControlName="message" rows="6"
+              [class.invalid]="form.get('message')?.invalid && form.get('message')?.touched"></textarea>
+            <small class="error-message error-message-textarea" *ngIf="form.get('message')?.invalid && form.get('message')?.touched">
+              <span *ngIf="form.get('message')?.errors?.['required']">Mensagem é obrigatória</span>
+              <span *ngIf="form.get('message')?.errors?.['minlength']">Mensagem muito curta</span>
+            </small>
           </div>
 
-
+          <div class="btn-container">
+            <button type="submit" [ngClass]="{'btn-primario': true, 'btn-disable': form.invalid || isSubmitting || !canSubmit()}">
+              {{ isSubmitting ? 'Enviando...' : 'Enviar' }}
+            </button>
+            <small class="error-message error-message-btn" *ngIf="!canSubmit()">
+              Aguarde alguns segundos antes de enviar outra mensagem.
+            </small>
+          </div>
         </form>
       </div>
 

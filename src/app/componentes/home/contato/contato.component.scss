@@ -122,9 +122,8 @@
 }
 
 .contato-item {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 60px 1fr;
   align-items: center;
   gap: 20px;
 
@@ -159,5 +158,29 @@
     font-size: 16px;
     font-size: 300;
     color: #ccc;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contato-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+}
+
+// TABLET
+@media (max-width: 768px) {
+  .contato-item-txts p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+// MOBILE
+@media (max-width: 480px) {
+  .input-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0px !important;
   }
 }

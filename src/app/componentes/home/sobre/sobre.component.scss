@@ -1,5 +1,5 @@
 .sobre-secao {
-  padding: 160px 0 80px;
+  padding-top: 160px;
   overflow: hidden;
   position: relative;
 
@@ -104,6 +104,10 @@
   .sobre-secao::before {
     top: 130px;
   }
+
+  .sobre-textos {
+    text-align: center;
+  }
   .sobre-grid {
     display: grid;
     justify-content: center;
@@ -118,5 +122,19 @@
 }
 
 // MOBILE
-@media (max-width: 425px) {
+@media (max-width: 480px) {
+  .sobre-secao {
+    padding-top: 60px;
+  }
+
+  .sobre-fotos {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+
+    .sobre-foto {
+      width: 250px;
+      height: 250px;
+    }
+  }
 }

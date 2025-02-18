@@ -98,6 +98,25 @@
   }
 
   li + li {
-    margin-top: 5px;
+    margin-top: 10px;
   }
+}
+
+// TABLET
+@media (max-width: 768px) {
+  .experiencia-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .experiencia-item {
+    max-width: 100%;
+    width: 100%;
+  }
+  .experiencia-container .titulo {
+    text-align: left;
+  }
+}
+
+// MOBILE
+@media (max-width: 480px) {
 }

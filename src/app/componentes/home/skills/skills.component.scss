@@ -33,3 +33,15 @@ swiper-container::part(bullet-active) {
 swiper-container::part(bullet) {
   background-color: #fff;
 }
+
+// MOBILE
+@media (max-width: 468px) {
+  .skill-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skill-tit {
+    font-size: 16px;
+  }
+}

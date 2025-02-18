@@ -84,20 +84,54 @@
 
 // TABLET
 @media (max-width: 768px) {
-  .apresentacao-texto {
-    margin-bottom: 40px;
-  }
+  .apresentacao-secao{
+    &::before {
 
+      width: 400px;
+      height: 400px;
+
+    }
+  }
+  .apresentacao-texto,
   .apresentacao-titulo {
-    font-size: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 40px;
   }
 
-  .apresentacao-container .btn-container {
+  .apresentacao-secao .btn-container,
+  .apresentacao-link-nav {
+    justify-content: center;
+  }
+
+  .apresentacao-secao .btn-container {
     margin-bottom: 40px;
   }
 }
 
 // MOBILE
-@media (max-width: 425px) {
+@media (max-width: 480px) {
+  .apresentacao-texto {
+    font-size: 24px;
+    max-width: 20ch;
+  }
+
+  .apresentacao-titulo {
+    font-size: 30px;
+  }
+
+  .apresentacao-secao .btn-primario {
+    font-size: 18px;
+  }
+
+  .apresentacao-link-nav {
+    font-size: 24px;
+    gap: 15px;
+
+    img {
+      width: 23px;
+      height: 16px;
+    }
+  }
 }

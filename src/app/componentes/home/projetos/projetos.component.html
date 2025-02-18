@@ -21,7 +21,7 @@
           'slidesPerView': 3
         },
         '768': {
-          'slidesPerView': 2
+          'slidesPerView': 1
         },
         '425': {
           'slidesPerView': 1
@@ -59,7 +59,20 @@
     <!-- Projetos Sites -->
     <swiper-container navigation="true" slides-per-view="3" pagination="true" effect="coverflow" centered-slides="true"
       coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-      coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false" *ngIf="!isChecked">
+      coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false" *ngIf="!isChecked" [breakpoints]="{
+        '1200': {
+          'slidesPerView': 3
+        },
+        '768': {
+          'slidesPerView': 1
+        },
+        '425': {
+          'slidesPerView': 1
+        },
+        '1': {
+          'slidesPerView': 1
+        }
+      }">
 
       <swiper-slide lazy="true" *ngFor="let projetoItem of projetosSites">
         <div class="projeto-item">

@@ -42,8 +42,8 @@ a {
 
 // CLASSES UTEIS
 .secao {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .titulo {
@@ -112,4 +112,23 @@ a {
     --cor-primaria
   ); /* Cor de fundo da seleção para Firefox */
   color: #ffffff; /* Cor do texto da seleção para Firefox */
+}
+
+// TABLET
+@media (max-width: 768px) {
+  .secao {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+// MOBILE
+@media (max-width: 468px) {
+  .titulo {
+    font-size: 32px;
+  }
+
+  .texto {
+    font-size: 18px;
+  }
 }

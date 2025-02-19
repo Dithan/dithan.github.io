@@ -13,6 +13,8 @@ import { ProjetosComponent } from './componentes/home/projetos/projetos.componen
 import { FormacaoComponent } from './componentes/home/formacao/formacao.component';
 import { ContatoComponent } from './componentes/home/contato/contato.component';
 import { FooterComponent } from './componentes/estrutura/footer/footer.component';
+import { ObrigadoComponent } from './componentes/paginas/obrigado/obrigado.component';
+import { NaoEncontradoComponent } from './componentes/paginas/nao-encontrado/nao-encontrado.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { FooterComponent } from './componentes/estrutura/footer/footer.component
     FormacaoComponent,
     ContatoComponent,
     FooterComponent,
+    ObrigadoComponent,
+    NaoEncontradoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { Router } from '@angular/router';
 import { environment } from '../../../../environments/environment';
 
 @Component({
@@ -14,7 +15,7 @@ export class ContatoComponent {
   lastSubmissionTime = 0;
   readonly SUBMISSION_DELAY = 30000; // 30 segundos entre envios
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.form = this.fb.group({
       from_name: ['', [Validators.required, Validators.minLength(2)]],
       to_name: ['Dithan'],
@@ -55,9 +56,7 @@ export class ContatoComponent {
         message: this.form.value.message,
       });
 
-      alert('Mensagem enviada com sucesso!');
-      this.form.reset();
-      this.lastSubmissionTime = Date.now();
+      this.router.navigate(['/obrigado']);
     } catch (error) {
       console.error('Erro ao enviar mensagem:', error);
       alert('Erro ao enviar mensagem. Por favor, tente novamente.');

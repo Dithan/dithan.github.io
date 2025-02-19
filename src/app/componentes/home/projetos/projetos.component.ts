@@ -22,7 +22,7 @@ export class ProjetosComponent {
       titulo: "Banco D'Ouro",
       img: './img/projetos/projetos-apps/banco-douro.jpg',
       texto:
-        "App de um banco fictício chamado Banco D'Ouro. Projeto desenvolvido durante o curso de Flutter da Alura. Neste projeto, criei telas, widgets, implementei navegação entre telas, validação de formulários, trabalhei com dados assíncronos e mais.",
+        "App fictício Banco D'Ouro. Projeto desenvolvido durante o curso de Flutter da Alura. Aqui criei telas, widgets, implementei navegação entre telas, validação de formulários, trabalhei com dados assíncronos e mais.",
       tech: 'Dart • Flutter',
       preview: '',
       github: 'https://github.com/Dithan/banco-douro',

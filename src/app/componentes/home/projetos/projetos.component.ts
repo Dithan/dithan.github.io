@@ -19,6 +19,15 @@ export class ProjetosComponent {
 
   projetosApps = [
     {
+      titulo: 'Cinetopia Flutter',
+      img: './img/projetos/projetos-apps/cinetopia-flutter.jpg',
+      texto:
+        'App fictício de filmes e sinopses, desenvolvido em Flutter utilizando a API The Movie DB e estruturado com os princípios SOLID durante o curso da Alura.',
+      tech: 'Dart • Flutter • Api REST • SOLID',
+      preview: '',
+      github: 'https://github.com/Dithan/cinetopia-flutter',
+    },
+    {
       titulo: "Banco D'Ouro",
       img: './img/projetos/projetos-apps/banco-douro.jpg',
       texto:

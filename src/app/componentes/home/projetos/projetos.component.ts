@@ -19,6 +19,24 @@ export class ProjetosComponent {
 
   projetosApps = [
     {
+      titulo: 'Quiz Perguntas',
+      img: './img/projetos/projetos-apps/quiz-perguntas.jpg',
+      texto:
+        'App simples de perguntas e respostas, projeto com finalidade de prática e estudo.',
+      tech: 'Dart • Flutter',
+      preview: '',
+      github: 'https://github.com/Dithan/quiz-perguntas',
+    },
+    {
+      titulo: 'Organizador de Tarefas',
+      img: './img/projetos/projetos-apps/organizador-de-tarefas.jpg',
+      texto:
+        'App fictício para organizar tarefas por níveis. Desenvolvido em Flutter e utilizando SQLite com o SQFlite.',
+      tech: 'Dart • Flutter • SQFlite',
+      preview: '',
+      github: 'https://github.com/Dithan/organizador-tarefas',
+    },
+    {
       titulo: 'Cinetopia Flutter',
       img: './img/projetos/projetos-apps/cinetopia-flutter.jpg',
       texto:

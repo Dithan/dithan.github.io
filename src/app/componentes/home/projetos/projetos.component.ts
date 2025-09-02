@@ -19,6 +19,33 @@ export class ProjetosComponent {
 
   projetosApps = [
     {
+      titulo: 'Valorant Memory',
+      img: './img/projetos/projetos-apps/valorant-memory.jpg',
+      texto:
+        'Jogo da memória inspirado no Valorant, desenvolvido em Flutter com boas práticas de arquitetura, gerenciamento de estado e persistência local.',
+      tech: 'Dart • Flutter • Provider • MobX • Hive',
+      preview: '',
+      github: 'https://github.com/Dithan/valorant-memory',
+    },
+    {
+      titulo: 'Meals',
+      img: './img/projetos/projetos-apps/meals.jpg',
+      texto:
+        'Aplicativo em Flutter focado em receitas, desenvolvido para praticar e consolidar conceitos de navegação entre telas.',
+      tech: 'Dart • Flutter',
+      preview: '',
+      github: 'https://github.com/Dithan/meals',
+    },
+    {
+      titulo: 'Expenses',
+      img: './img/projetos/projetos-apps/expenses.jpg',
+      texto:
+        'App fictício de finanças feito em Flutter, onde aprimorei o uso de componentes visuais e configuração de temas.',
+      tech: 'Dart • Flutter',
+      preview: '',
+      github: 'https://github.com/Dithan/expenses',
+    },
+    {
       titulo: 'Quiz Perguntas',
       img: './img/projetos/projetos-apps/quiz-perguntas.jpg',
       texto:

@@ -15,6 +15,7 @@ import { ContatoComponent } from './componentes/home/contato/contato.component';
 import { FooterComponent } from './componentes/estrutura/footer/footer.component';
 import { ObrigadoComponent } from './componentes/paginas/obrigado/obrigado.component';
 import { NaoEncontradoComponent } from './componentes/paginas/nao-encontrado/nao-encontrado.component';
+import { CursorGlassComponent } from './componentes/home/cursor-glass/cursor-glass.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NaoEncontradoComponent } from './componentes/paginas/nao-encontrado/nao
     FooterComponent,
     ObrigadoComponent,
     NaoEncontradoComponent,
+    CursorGlassComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

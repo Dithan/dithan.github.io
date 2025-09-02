@@ -1,0 +1,11 @@
+<div class="minimal-cursor-dot"
+  [style.transform]="'translate3d(' + cursorX + 'px, ' + cursorY + 'px, 0) ' + (isHovering ? 'scale(1.5)' : '')"
+  [style.width.px]="dotSize" [style.height.px]="dotSize" [style.background]="dotColor"
+  [class.cursor-hover]="isHovering">
+</div>
+
+<div class="minimal-cursor-ring"
+  [style.transform]="'translate3d(' + ringX + 'px, ' + ringY + 'px, 0) ' + (isHovering ? 'scale(1.5)' : '')"
+  [style.width.px]="ringSize" [style.height.px]="ringSize" [style.border-color]="ringColor"
+  [style.border-width.px]="ringBorder" [class.cursor-hover]="isHovering">
+</div>

@@ -6,15 +6,16 @@
   &::before {
     content: "";
     display: block;
-    width: 450px;
-    height: 450px;
+    width: 420px;
+    height: 420px;
     position: absolute;
     top: 20px;
     right: -220px;
-    background: radial-gradient(#4a2cc5, #5a83eb);
+    background: radial-gradient(#4a2cc5, #5a83eb), url("/img/noise.jpg");
+    background-blend-mode: overlay;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.15;
+    filter: blur(100px);
+    opacity: 0.25;
     z-index: -1;
   }
 }
@@ -102,7 +103,7 @@
 }
 
 // TABLET
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .sobre-secao::before {
     top: 130px;
   }
@@ -125,7 +126,7 @@
 }
 
 // MOBILE
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .sobre-secao {
     padding-top: 60px;
   }

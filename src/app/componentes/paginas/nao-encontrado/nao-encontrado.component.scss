@@ -12,10 +12,11 @@
     position: absolute;
     top: -80px;
     left: -220px;
-    background: radial-gradient(#4a2cc5, #5a83eb);
+    background: radial-gradient(#4a2cc5, #5a83eb), url("/img/noise.jpg");
+    background-blend-mode: overlay;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.15;
+    filter: blur(100px);
+    opacity: 0.25;
     z-index: -1;
   }
 
@@ -27,10 +28,11 @@
     position: absolute;
     bottom: -80px;
     right: -220px;
-    background: radial-gradient(#4a2cc5, #5a83eb);
+    background: radial-gradient(#4a2cc5, #5a83eb), url("/img/noise.jpg");
+    background-blend-mode: overlay;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.15;
+    filter: blur(100px);
+    opacity: 0.25;
     z-index: -1;
   }
 

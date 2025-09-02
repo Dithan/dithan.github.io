@@ -1,11 +1,190 @@
 .formacao-secao {
-  background: #000;
   position: relative;
-  z-index: 0;
+  margin-top: 200px;
+  background: transparent;
+  padding: 0;
+
+  // Escrita FORMAÇÃO
+  &::before {
+    content: "Formação";
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 220px;
+    font-weight: 800;
+    position: absolute;
+    top: -190px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    z-index: 0;
+
+    // TABLET
+  }
+
+  .detalhe-tit {
+    display: block;
+    width: 20vw;
+    height: 40px;
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    background: var(--cor-primaria);
+    opacity: 0.9;
+    z-index: -1;
+    transition: 0.9s ease-out;
+  }
+
+  .detalhe-tit-2 {
+    display: block;
+    width: 20vw;
+    height: 40px;
+    position: absolute;
+    top: -60px;
+    right: 0px;
+    background: var(--cor-secundaria);
+    opacity: 0.9;
+    z-index: -1;
+    transition: 0.9s ease-out;
+  }
+
+  &:hover {
+    .detalhe-tit,
+    .detalhe-tit-2 {
+      width: 5vw;
+    }
+  }
+
+  // Detalhe que gira
+  // Limita o espaço
+  .detalhe-glass {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .detalhe-glass .detalhe-que-gira {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 20px;
+    z-index: -1;
+    animation: gira-gira 20s infinite linear;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1200px;
+      height: 1200px;
+      border-radius: 50%;
+      z-index: -1;
+      filter: blur(60px);
+      animation: neon-breathe 6s ease-in-out infinite alternate;
+    }
+
+    &::before {
+      top: -600px;
+      left: -600px;
+      background: radial-gradient(
+          circle at 30% 40%,
+          rgba(74, 44, 197, 0.9) 0%,
+          rgba(150, 199, 243, 0.7) 25%,
+          rgba(100, 80, 220, 0.6) 50%,
+          rgba(170, 210, 250, 0.4) 75%,
+          transparent 100%
+        ),
+        radial-gradient(
+          circle at 70% 60%,
+          rgba(255, 20, 147, 0.6) 0%,
+          transparent 50%
+        );
+      animation-delay: 0s;
+      transform: rotate(0deg);
+    }
+
+    &::after {
+      bottom: -600px;
+      right: -600px;
+      background: radial-gradient(
+          circle at 60% 30%,
+          rgba(74, 44, 197, 0.9) 0%,
+          rgba(150, 199, 243, 0.7) 25%,
+          rgba(100, 80, 220, 0.6) 50%,
+          rgba(170, 210, 250, 0.4) 75%,
+          transparent 100%
+        ),
+        radial-gradient(
+          circle at 20% 70%,
+          rgba(130, 170, 230, 0.6) 0%,
+          transparent 50%
+        );
+      animation-delay: -3s;
+      transform: rotate(180deg);
+    }
+  }
+
+  // Glass
+  .formacao-wrapper {
+    background-image: url("/img/noise.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #0000004d;
+    backdrop-filter: blur(20px);
+    position: relative;
+    border-top: 1px solid #cccccc66;
+    border-bottom: 1px solid #cccccc66;
+    z-index: 2;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@keyframes neon-breathe {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.3;
+    filter: blur(40px) saturate(1.2);
+  }
+  50% {
+    transform: scale(1.1) rotate(90deg);
+    opacity: 0.6;
+    filter: blur(80px) saturate(1.8);
+  }
+  100% {
+    transform: scale(0.9) rotate(180deg);
+    opacity: 0.4;
+    filter: blur(60px) saturate(1.5);
+  }
+}
+
+@keyframes gira-gira {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+// Ponteiro Ring do mouse, efeito
+.formacao-wrapper:hover > .minimal-cursor-ring {
+  background: var(--cor-primaria) !important;
 }
 
 .formacao-container {
   margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 20px;
 }
 
 .formacao-txts {
@@ -15,6 +194,13 @@
   align-items: flex-start;
   gap: 10px;
   color: #fff;
+  line-height: 1.5;
+}
+
+.formacao-txts + .formacao-txts {
+  margin-top: 20px;
+  border-top: 1px solid #ffffff0b;
+  padding-top: 20px;
 }
 
 .formacao-data {
@@ -25,6 +211,10 @@
 .formacao-tit {
   font-size: 20px;
   font-size: 700;
+
+  i {
+    color: var(--cor-secundaria);
+  }
 }
 
 .formacao-subtit {
@@ -103,7 +293,42 @@
 }
 
 // TABLET
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .formacao-secao {
+    margin-top: 140px;
+
+    // Escrita FORMAÇÃO
+    &::before {
+      font-size: 150px;
+      top: -125px;
+    }
+
+    .detalhe-tit {
+      width: 20vw;
+      height: 25px;
+      top: -91px;
+    }
+
+    .detalhe-tit-2 {
+      width: 20vw;
+      height: 25px;
+      top: -60px;
+    }
+
+    // Background que gira
+    .detalhe-glass .detalhe-que-gira {
+      width: 140%;
+
+      &::before,
+      &::after {
+        width: 700px;
+        height: 700px;
+        filter: blur(60px);
+        animation: neon-breathe 6s ease-in-out infinite alternate;
+      }
+    }
+  }
+
   .experiencia-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -118,5 +343,46 @@
 }
 
 // MOBILE
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .formacao-secao {
+    margin-top: 60px;
+    // Escrita FORMAÇÃO
+    &::before {
+      font-size: 64px;
+      top: -52px;
+    }
+
+    .detalhe-tit {
+      width: 20vw;
+      height: 15px;
+      top: -38px;
+    }
+
+    .detalhe-tit-2 {
+      width: 20vw;
+      height: 15px;
+      top: -26px;
+    }
+
+    // Background que gira
+    .detalhe-glass .detalhe-que-gira {
+      width: 200%;
+
+      &::before,
+      &::after {
+        width: 400px;
+        height: 400px;
+        filter: blur(60px);
+        animation: neon-breathe 6s ease-in-out infinite alternate;
+      }
+    }
+
+    .formacao-wrapper {
+      backdrop-filter: blur(6px);
+    }
+  }
+
+  .experiencia-item {
+    padding: 20px;
+  }
 }

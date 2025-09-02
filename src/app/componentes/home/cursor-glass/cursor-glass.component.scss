@@ -1,0 +1,38 @@
+.minimal-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+
+.minimal-cursor-dot.cursor-hover {
+  opacity: 0.8;
+}
+
+.minimal-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border-style: solid;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.6;
+  will-change: transform;
+  transition: 0.1s ease-out;
+}
+
+.minimal-cursor-ring.cursor-hover {
+  opacity: 0.3;
+}
+
+@media (max-width: 1200px) {
+  .minimal-cursor-dot,
+  .minimal-cursor-ring {
+    display: none;
+  }
+}
